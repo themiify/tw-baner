@@ -1,14 +1,819 @@
 {
     "name": {
-        "ar": "\u0628\u0627\u0646\u0631",
-        "en": "baner"
+        "ar": "سلايدر بانر رئيسي فخم (Haute Couture Slideshow)",
+        "en": "Haute Couture Hero Slideshow"
     },
     "description": {
-        "ar": "",
-        "en": ""
+        "ar": "سلايدر بانر سينمائي فاخر يحاكي أرقى متاجر الأزياء العالمية، يدعم فيديو وصور كاملة، تحكم كامل بمكان النصوص عمودياً وأفقياً، ارتفاع بالبكسل للجوال والكمبيوتر، عداد سلة، ونسخ كود الخصم",
+        "en": "Cinematic luxury hero slideshow supporting background video/images, 9-direction text positioning, mobile and desktop pixel height controls, countdown timer, and 1-click coupon copying"
     },
     "author_email": "MahmoudSalah@azzrk.com",
-    "support_url": "",
+    "support_url": "https://salla.dev",
     "repository": "https://github.com/themiify/tw-baner",
-    "components": []
+    "components": [
+        {
+            "title": "بانر رئيسي فاخر",
+            "icon": "sicon-megaphone",
+            "name": "promo-banner",
+            "key": "770eddbc-56a8-438a-87ea-3c90b718aef0",
+            "image": "https://clothing-preset-volume.myshopify.com/cdn/shop/files/preview_images/8a682a7e04ee4813bf2f722b01565a7e.thumbnail.0000000000.jpg?v=1784207448&width=1100",
+            "fields": [
+                {
+                    "id": "height_desktop",
+                    "key": "height_desktop",
+                    "icon": "sicon-layout-grid",
+                    "type": "number",
+                    "label": "ارتفاع البانر على الكمبيوتر (vh)",
+                    "format": "slider",
+                    "inputType": "range",
+                    "minimum": 40,
+                    "maximum": 100,
+                    "step": 1,
+                    "required": false,
+                    "value": 92
+                },
+                {
+                    "id": "height_mobile",
+                    "key": "height_mobile",
+                    "icon": "sicon-mobile",
+                    "type": "number",
+                    "label": "ارتفاع البانر على الجوال (vh)",
+                    "format": "slider",
+                    "inputType": "range",
+                    "minimum": 35,
+                    "maximum": 100,
+                    "step": 1,
+                    "required": false,
+                    "value": 82
+                },
+                {
+                    "id": "slider_autoplay",
+                    "key": "slider_autoplay",
+                    "icon": "sicon-play",
+                    "type": "boolean",
+                    "label": "التشغيل التلقائي للشرائح",
+                    "format": "switch",
+                    "required": false,
+                    "value": true
+                },
+                {
+                    "id": "slider_delay",
+                    "key": "slider_delay",
+                    "icon": "sicon-clock",
+                    "type": "number",
+                    "label": "سرعة التبديل (بالثواني)",
+                    "format": "slider",
+                    "inputType": "range",
+                    "minimum": 2,
+                    "maximum": 12,
+                    "step": 1,
+                    "required": false,
+                    "value": 5
+                },
+                {
+                    "id": "slider_navigation",
+                    "key": "slider_navigation",
+                    "icon": "sicon-arrow-right",
+                    "type": "boolean",
+                    "label": "إظهار أسهم التنقل الفاخرة",
+                    "format": "switch",
+                    "required": false,
+                    "value": true
+                },
+                {
+                    "id": "slider_pagination",
+                    "key": "slider_pagination",
+                    "icon": "sicon-dot",
+                    "type": "boolean",
+                    "label": "إظهار نقاط مؤشر الشرائح (Bullets)",
+                    "format": "switch",
+                    "required": false,
+                    "value": true
+                },
+                {
+                    "id": "show_progress_btn",
+                    "key": "show_progress_btn",
+                    "icon": "sicon-refresh",
+                    "type": "boolean",
+                    "label": "إظهار زر مؤشر العرض الدائري وإيقاف/تشغيل مؤقت",
+                    "format": "switch",
+                    "required": false,
+                    "value": true
+                },
+                {
+                    "id": "slides",
+                    "key": "slides",
+                    "type": "collection",
+                    "format": "collection",
+                    "required": true,
+                    "item_label": "شرائح البانر",
+                    "minLength": 1,
+                    "maxLength": 10,
+                    "value": [
+                        {
+                            "bg_type": [
+                                {
+                                    "key": "video",
+                                    "value": "video",
+                                    "label": "فيديو ترويجي حيوي (Video Background)"
+                                }
+                            ],
+                            "bg_video_url": "https://clothing-preset-volume.myshopify.com/cdn/shop/videos/c/vp/8a682a7e04ee4813bf2f722b01565a7e/8a682a7e04ee4813bf2f722b01565a7e.HD-1080p-4.8Mbps-89110328.mp4?v=0",
+                            "bg_image": "https://clothing-preset-volume.myshopify.com/cdn/shop/files/preview_images/8a682a7e04ee4813bf2f722b01565a7e.thumbnail.0000000000.jpg?v=1784207448&width=1100",
+                            "custom_bg_color": "#000000",
+                            "theme_style": [
+                                {
+                                    "key": "luxury-dark",
+                                    "value": "luxury-dark",
+                                    "label": "أسود ملكي فاخر (Luxury Dark)"
+                                }
+                            ],
+                            "bg_overlay_opacity": 25,
+                            "content_v_align": [
+                                {
+                                    "key": "end",
+                                    "value": "end",
+                                    "label": "أسفل الشريحة (Bottom - مثل شوبيفاي)"
+                                }
+                            ],
+                            "content_h_align": [
+                                {
+                                    "key": "center",
+                                    "value": "center",
+                                    "label": "في المنتصف (Center)"
+                                }
+                            ],
+                            "subheading": {
+                                "ar": "فلسفة الأناقة العصرية",
+                                "en": "Philosophy of Style"
+                            },
+                            "title": {
+                                "ar": "فن الخياطة الراقية والأزياء الفاخرة لعام 2026",
+                                "en": "The architecture of modern outerwear & premium tailoring"
+                            },
+                            "title_highlight": {
+                                "ar": "تشكيلة حصرية",
+                                "en": "Exclusive Edit"
+                            },
+                            "subtitle": {
+                                "ar": "استمتع بأحدث مجموعات الأزياء الراقية والقصات العصرية المصممة بعناية فائقة لتناسب إطلالتك الفاخرة.",
+                                "en": "Explore our curated runway collection, designed with meticulous craftsmanship for timeless elegance."
+                            },
+                            "heading_color": "#ffffff",
+                            "subheading_color": "rgba(255, 255, 255, 0.85)",
+                            "cta_text": {
+                                "ar": "اكتشف التشكيلة الآن",
+                                "en": "Explore Collection"
+                            },
+                            "url": "https://salla.sa",
+                            "button_style": [
+                                {
+                                    "key": "solid",
+                                    "value": "solid",
+                                    "label": "أبيض فاخر ممتلئ (Luxury Solid)"
+                                }
+                            ],
+                            "btn_bg_color": "#ffffff",
+                            "btn_text_color": "#000000",
+                            "coupon_enabled": true,
+                            "coupon_code": "VOLUME26",
+                            "countdown_enabled": true,
+                            "countdown_end": "2026-12-31 23:59:00"
+                        },
+                        {
+                            "bg_type": [
+                                {
+                                    "key": "image",
+                                    "value": "image",
+                                    "label": "صورة خلفية كاملة (Image Background)"
+                                }
+                            ],
+                            "bg_video_url": "",
+                            "bg_image": "https://clothing-preset-volume.myshopify.com/cdn/shop/files/Landscape_20banner_20-_2009-Wrap_20coat_20Landscape_20Banner_20Black_203-4_2001v01.jpg?v=1782913382&width=2000",
+                            "custom_bg_color": "#000000",
+                            "theme_style": [
+                                {
+                                    "key": "luxury-dark",
+                                    "value": "luxury-dark",
+                                    "label": "أسود ملكي فاخر (Luxury Dark)"
+                                }
+                            ],
+                            "bg_overlay_opacity": 35,
+                            "content_v_align": [
+                                {
+                                    "key": "end",
+                                    "value": "end",
+                                    "label": "أسفل الشريحة (Bottom - مثل شوبيفاي)"
+                                }
+                            ],
+                            "content_h_align": [
+                                {
+                                    "key": "start",
+                                    "value": "start",
+                                    "label": "جهة اليمين (Right)"
+                                }
+                            ],
+                            "subheading": {
+                                "ar": "قطع جاهزة للارتداء",
+                                "en": "Ready-to-wear Pieces"
+                            },
+                            "title": {
+                                "ar": "تصاميم كلاسيكية بإتقان استثنائي من كبار المصممين",
+                                "en": "Curated essentials & signature fits from leading designers"
+                            },
+                            "title_highlight": {
+                                "ar": "خصم 30%",
+                                "en": "30% OFF"
+                            },
+                            "subtitle": {
+                                "ar": "تصاميم استثنائية من نخبة المصممين مع شحن فوري مجاني لكافة مدن المملكة وضمان ذهبي للاستبدال.",
+                                "en": "Exceptional cuts, breathable luxury textiles, and bespoke details tailored for the discerning eye."
+                            },
+                            "heading_color": "#ffffff",
+                            "subheading_color": "rgba(255, 255, 255, 0.85)",
+                            "cta_text": {
+                                "ar": "تسوق التشكيلة الفاخرة",
+                                "en": "Shop The Edit"
+                            },
+                            "url": "https://salla.sa",
+                            "button_style": [
+                                {
+                                    "key": "glass",
+                                    "value": "glass",
+                                    "label": "زجاجي شفاف (Glassmorphism)"
+                                }
+                            ],
+                            "btn_bg_color": "rgba(255, 255, 255, 0.15)",
+                            "btn_text_color": "#ffffff",
+                            "coupon_enabled": true,
+                            "coupon_code": "VIPSTYLE",
+                            "countdown_enabled": false,
+                            "countdown_end": "2026-11-20 20:00:00"
+                        },
+                        {
+                            "bg_type": [
+                                {
+                                    "key": "color",
+                                    "value": "color",
+                                    "label": "ألوان وتدرجات فاخرة (Color / Gradient)"
+                                }
+                            ],
+                            "bg_video_url": "",
+                            "bg_image": "",
+                            "custom_bg_color": "#064e3b",
+                            "theme_style": [
+                                {
+                                    "key": "salla-emerald",
+                                    "value": "salla-emerald",
+                                    "label": "أخضر زمردي سلة (Salla Emerald)"
+                                }
+                            ],
+                            "bg_overlay_opacity": 40,
+                            "content_v_align": [
+                                {
+                                    "key": "center",
+                                    "value": "center",
+                                    "label": "في المنتصف تماماً (Center)"
+                                }
+                            ],
+                            "content_h_align": [
+                                {
+                                    "key": "center",
+                                    "value": "center",
+                                    "label": "في المنتصف (Center)"
+                                }
+                            ],
+                            "subheading": {
+                                "ar": "عروض حصرية لفترة محدودة",
+                                "en": "Limited Time Offer"
+                            },
+                            "title": {
+                                "ar": "أقوى تخفيضات الموسم على كافة التشكيلات المختارة",
+                                "en": "Season Finale: Architectural silhouettes at unmissable values"
+                            },
+                            "title_highlight": {
+                                "ar": "خصم حتى 50%",
+                                "en": "Up to 50% OFF"
+                            },
+                            "subtitle": {
+                                "ar": "فرصة لا تعوض لتجديد خزانة ملابسك بأرقى القطع العصرية بأسعار استثنائية وشحن سريع.",
+                                "en": "An exclusive opportunity to upgrade your wardrobe with iconic luxury fashion and complimentary express shipping."
+                            },
+                            "heading_color": "#ffffff",
+                            "subheading_color": "#d1fae5",
+                            "cta_text": {
+                                "ar": "استفد من العرض الآن",
+                                "en": "Claim Offer Now"
+                            },
+                            "url": "https://salla.sa",
+                            "button_style": [
+                                {
+                                    "key": "solid",
+                                    "value": "solid",
+                                    "label": "أبيض فاخر ممتلئ (Luxury Solid)"
+                                }
+                            ],
+                            "btn_bg_color": "#10b981",
+                            "btn_text_color": "#ffffff",
+                            "coupon_enabled": true,
+                            "coupon_code": "SALLA50",
+                            "countdown_enabled": true,
+                            "countdown_end": "2026-12-15 18:00:00"
+                        }
+                    ],
+                    "fields": [
+                        {
+                            "id": "bg_type",
+                            "key": "bg_type",
+                            "icon": "sicon-color-palette",
+                            "type": "items",
+                            "source": "Manual",
+                            "label": "نوع خلفية الشريحة",
+                            "format": "dropdown-list",
+                            "required": true,
+                            "multichoice": false,
+                            "options": [
+                                {
+                                    "label": "فيديو ترويجي حيوي (Video Background)",
+                                    "value": "video",
+                                    "key": "video"
+                                },
+                                {
+                                    "label": "صورة خلفية كاملة (Image Background)",
+                                    "value": "image",
+                                    "key": "image"
+                                },
+                                {
+                                    "label": "ألوان وتدرجات فاخرة (Color / Gradient)",
+                                    "value": "color",
+                                    "key": "color"
+                                }
+                            ],
+                            "selected": [
+                                {
+                                    "label": "فيديو ترويجي حيوي (Video Background)",
+                                    "value": "video",
+                                    "key": "video"
+                                }
+                            ],
+                            "value": [
+                                {
+                                    "label": "فيديو ترويجي حيوي (Video Background)",
+                                    "value": "video",
+                                    "key": "video"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "bg_video_url",
+                            "key": "bg_video_url",
+                            "icon": "sicon-video",
+                            "type": "string",
+                            "format": "url",
+                            "label": "رابط فيديو خلفية الشريحة (MP4 / WebM)",
+                            "required": false,
+                            "placeholder": "https://...mp4",
+                            "value": "https://clothing-preset-volume.myshopify.com/cdn/shop/videos/c/vp/8a682a7e04ee4813bf2f722b01565a7e/8a682a7e04ee4813bf2f722b01565a7e.HD-1080p-4.8Mbps-89110328.mp4?v=0"
+                        },
+                        {
+                            "id": "bg_image",
+                            "key": "bg_image",
+                            "icon": "sicon-image-landscape",
+                            "type": "string",
+                            "format": "image",
+                            "label": "صورة خلفية الشريحة (أو بوستر الفيديو)",
+                            "required": false,
+                            "value": "https://clothing-preset-volume.myshopify.com/cdn/shop/files/preview_images/8a682a7e04ee4813bf2f722b01565a7e.thumbnail.0000000000.jpg?v=1784207448&width=1100"
+                        },
+                        {
+                            "id": "custom_bg_color",
+                            "key": "custom_bg_color",
+                            "icon": "sicon-color-palette",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون مخصص لخلفية الشريحة (اختياري)",
+                            "required": false,
+                            "value": "#000000"
+                        },
+                        {
+                            "id": "theme_style",
+                            "key": "theme_style",
+                            "icon": "sicon-paint-roll",
+                            "type": "items",
+                            "source": "Manual",
+                            "label": "الثيم اللوني للشريحة",
+                            "format": "dropdown-list",
+                            "required": false,
+                            "multichoice": false,
+                            "options": [
+                                {
+                                    "label": "أسود ملكي فاخر (Luxury Dark)",
+                                    "value": "luxury-dark",
+                                    "key": "luxury-dark"
+                                },
+                                {
+                                    "label": "أخضر زمردي سلة (Salla Emerald)",
+                                    "value": "salla-emerald",
+                                    "key": "salla-emerald"
+                                },
+                                {
+                                    "label": "تدرج ناري حيوي (Sunset Glow)",
+                                    "value": "sunset-glow",
+                                    "key": "sunset-glow"
+                                },
+                                {
+                                    "label": "بنفسجي إلكتروني (Royal Purple)",
+                                    "value": "royal-purple",
+                                    "key": "royal-purple"
+                                },
+                                {
+                                    "label": "ألوان هوية المتجر (Store Theme)",
+                                    "value": "store-theme",
+                                    "key": "store-theme"
+                                }
+                            ],
+                            "selected": [
+                                {
+                                    "label": "أسود ملكي فاخر (Luxury Dark)",
+                                    "value": "luxury-dark",
+                                    "key": "luxury-dark"
+                                }
+                            ],
+                            "value": [
+                                {
+                                    "label": "أسود ملكي فاخر (Luxury Dark)",
+                                    "value": "luxury-dark",
+                                    "key": "luxury-dark"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "bg_overlay_opacity",
+                            "key": "bg_overlay_opacity",
+                            "icon": "sicon-adjust",
+                            "type": "number",
+                            "label": "درجة تعتيم طبقة الخلفية (%)",
+                            "format": "slider",
+                            "inputType": "range",
+                            "minimum": 0,
+                            "maximum": 95,
+                            "step": 5,
+                            "required": false,
+                            "value": 25
+                        },
+                        {
+                            "id": "content_v_align",
+                            "key": "content_v_align",
+                            "icon": "sicon-align-vertical-center",
+                            "type": "items",
+                            "source": "Manual",
+                            "label": "مكان النصوص عمودياً (Vertical Position)",
+                            "format": "dropdown-list",
+                            "required": true,
+                            "multichoice": false,
+                            "options": [
+                                {
+                                    "label": "أسفل الشريحة (Bottom - مثل شوبيفاي)",
+                                    "value": "end",
+                                    "key": "end"
+                                },
+                                {
+                                    "label": "في المنتصف تماماً (Center)",
+                                    "value": "center",
+                                    "key": "center"
+                                },
+                                {
+                                    "label": "أعلى الشريحة (Top)",
+                                    "value": "start",
+                                    "key": "start"
+                                }
+                            ],
+                            "selected": [
+                                {
+                                    "label": "أسفل الشريحة (Bottom - مثل شوبيفاي)",
+                                    "value": "end",
+                                    "key": "end"
+                                }
+                            ],
+                            "value": [
+                                {
+                                    "label": "أسفل الشريحة (Bottom - مثل شوبيفاي)",
+                                    "value": "end",
+                                    "key": "end"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "content_h_align",
+                            "key": "content_h_align",
+                            "icon": "sicon-align-center",
+                            "type": "items",
+                            "source": "Manual",
+                            "label": "مكان النصوص أفقياً (Horizontal Position)",
+                            "format": "dropdown-list",
+                            "required": true,
+                            "multichoice": false,
+                            "options": [
+                                {
+                                    "label": "في المنتصف (Center)",
+                                    "value": "center",
+                                    "key": "center"
+                                },
+                                {
+                                    "label": "جهة اليمين (Right)",
+                                    "value": "start",
+                                    "key": "start"
+                                },
+                                {
+                                    "label": "جهة اليسار (Left)",
+                                    "value": "end",
+                                    "key": "end"
+                                }
+                            ],
+                            "selected": [
+                                {
+                                    "label": "في المنتصف (Center)",
+                                    "value": "center",
+                                    "key": "center"
+                                }
+                            ],
+                            "value": [
+                                {
+                                    "label": "في المنتصف (Center)",
+                                    "value": "center",
+                                    "key": "center"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "subheading",
+                            "key": "subheading",
+                            "icon": "sicon-star",
+                            "type": "string",
+                            "label": "العنوان الفرعي الصغير (Subheading)",
+                            "format": "text",
+                            "multilanguage": true,
+                            "required": false,
+                            "placeholder": "مثال: Philosophy of style",
+                            "value": {
+                                "ar": "فلسفة الأناقة العصرية",
+                                "en": "Philosophy of Style"
+                            }
+                        },
+                        {
+                            "id": "title",
+                            "key": "title",
+                            "icon": "sicon-format-text-alt",
+                            "type": "string",
+                            "label": "العنوان الرئيسي للشريحة (Heading)",
+                            "format": "text",
+                            "multilanguage": true,
+                            "required": true,
+                            "placeholder": "أدخل عنوان الشريحة الرئيسي...",
+                            "minLength": 1,
+                            "maxLength": 120,
+                            "value": {
+                                "ar": "فن الخياطة الراقية والأزياء الفاخرة لعام 2026",
+                                "en": "The architecture of modern outerwear & premium tailoring"
+                            }
+                        },
+                        {
+                            "id": "title_highlight",
+                            "key": "title_highlight",
+                            "icon": "sicon-paint-roll",
+                            "type": "string",
+                            "label": "نص بارز ملون (Highlight)",
+                            "format": "text",
+                            "multilanguage": true,
+                            "required": false,
+                            "placeholder": "مثال: خصم 30%",
+                            "value": {
+                                "ar": "تشكيلة حصرية",
+                                "en": "Exclusive Edit"
+                            }
+                        },
+                        {
+                            "id": "subtitle",
+                            "key": "subtitle",
+                            "icon": "sicon-paragraph",
+                            "type": "string",
+                            "label": "الوصف الترويجي (Description)",
+                            "format": "textarea",
+                            "multilanguage": true,
+                            "required": false,
+                            "rows": 3,
+                            "placeholder": "أدخل تفاصيل ومزايا العرض...",
+                            "value": {
+                                "ar": "استمتع بأحدث مجموعات الأزياء الراقية والقصات العصرية المصممة بعناية فائقة لتناسب إطلالتك الفاخرة.",
+                                "en": "Explore our curated runway collection, designed with meticulous craftsmanship for timeless elegance."
+                            }
+                        },
+                        {
+                            "id": "heading_color",
+                            "key": "heading_color",
+                            "icon": "sicon-color-palette",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون مخصص للعنوان الرئيسي (اختياري)",
+                            "required": false,
+                            "value": "#ffffff"
+                        },
+                        {
+                            "id": "subheading_color",
+                            "key": "subheading_color",
+                            "icon": "sicon-color-palette",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون مخصص للعنوان الفرعي والوصف (اختياري)",
+                            "required": false,
+                            "value": "rgba(255, 255, 255, 0.85)"
+                        },
+                        {
+                            "id": "cta_text",
+                            "key": "cta_text",
+                            "icon": "sicon-cursor",
+                            "type": "string",
+                            "label": "نص الزر الرئيسي (Button Text)",
+                            "format": "text",
+                            "multilanguage": true,
+                            "required": false,
+                            "placeholder": "مثال: اكتشف التشكيلة",
+                            "value": {
+                                "ar": "اكتشف التشكيلة الآن",
+                                "en": "Explore Collection"
+                            }
+                        },
+                        {
+                            "id": "url",
+                            "key": "url",
+                            "icon": "sicon-link",
+                            "type": "items",
+                            "label": "رابط الزر والوجهة",
+                            "format": "variable-list",
+                            "required": true,
+                            "source": "custom",
+                            "selected": [
+                                {
+                                    "label": "Custom",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ],
+                            "sources": [
+                                {
+                                    "label": "منتج من المتجر",
+                                    "key": "products",
+                                    "value": "products"
+                                },
+                                {
+                                    "label": "تصنيف / قسم",
+                                    "key": "categories",
+                                    "value": "categories"
+                                },
+                                {
+                                    "label": "ماركة تجارية",
+                                    "key": "brands",
+                                    "value": "brands"
+                                },
+                                {
+                                    "label": "صفحة مخصصة",
+                                    "key": "pages",
+                                    "value": "pages"
+                                },
+                                {
+                                    "label": "عروض خاصة",
+                                    "key": "offers_link",
+                                    "value": "offers_link"
+                                },
+                                {
+                                    "label": "رابط مخصص",
+                                    "key": "custom",
+                                    "value": "custom"
+                                }
+                            ],
+                            "value": "https://salla.sa"
+                        },
+                        {
+                            "id": "button_style",
+                            "key": "button_style",
+                            "icon": "sicon-layout-grid",
+                            "type": "items",
+                            "source": "Manual",
+                            "label": "نمط وشكل الزر",
+                            "format": "dropdown-list",
+                            "required": false,
+                            "multichoice": false,
+                            "options": [
+                                {
+                                    "label": "أبيض فاخر ممتلئ (Luxury Solid)",
+                                    "value": "solid",
+                                    "key": "solid"
+                                },
+                                {
+                                    "label": "زجاجي شفاف (Glassmorphism)",
+                                    "value": "glass",
+                                    "key": "glass"
+                                },
+                                {
+                                    "label": "إطار رفيع أنيق (Outline)",
+                                    "value": "outline",
+                                    "key": "outline"
+                                }
+                            ],
+                            "selected": [
+                                {
+                                    "label": "أبيض فاخر ممتلئ (Luxury Solid)",
+                                    "value": "solid",
+                                    "key": "solid"
+                                }
+                            ],
+                            "value": [
+                                {
+                                    "label": "أبيض فاخر ممتلئ (Luxury Solid)",
+                                    "value": "solid",
+                                    "key": "solid"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "btn_bg_color",
+                            "key": "btn_bg_color",
+                            "icon": "sicon-color-palette",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون خلفية الزر (اختياري)",
+                            "required": false,
+                            "value": "#ffffff"
+                        },
+                        {
+                            "id": "btn_text_color",
+                            "key": "btn_text_color",
+                            "icon": "sicon-color-palette",
+                            "type": "string",
+                            "format": "color",
+                            "inputType": "color",
+                            "label": "لون نص الزر (اختياري)",
+                            "required": false,
+                            "value": "#000000"
+                        },
+                        {
+                            "id": "coupon_enabled",
+                            "key": "coupon_enabled",
+                            "icon": "sicon-discount",
+                            "type": "boolean",
+                            "label": "تفعيل كود الخصم التفاعلي",
+                            "format": "switch",
+                            "required": false,
+                            "value": true
+                        },
+                        {
+                            "id": "coupon_code",
+                            "key": "coupon_code",
+                            "icon": "sicon-tag",
+                            "type": "string",
+                            "label": "رمز كود الخصم (لنسخه بنقرة واحدة)",
+                            "format": "text",
+                            "required": false,
+                            "placeholder": "مثال: VOLUME26"
+                        },
+                        {
+                            "id": "countdown_enabled",
+                            "key": "countdown_enabled",
+                            "icon": "sicon-clock",
+                            "type": "boolean",
+                            "label": "تفعيل عداد سلة التنازلي لهذه الشريحة",
+                            "format": "switch",
+                            "required": false,
+                            "value": true
+                        },
+                        {
+                            "id": "countdown_end",
+                            "key": "countdown_end",
+                            "icon": "sicon-calendar-time",
+                            "type": "string",
+                            "format": "datetime",
+                            "inputType": "date",
+                            "label": "تاريخ ووقت انتهاء العرض",
+                            "required": false,
+                            "value": "2026-12-31 23:59:00"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "templates": [
+        {
+            "id": "9af106ef-6bc9-4ae4-8bbd-c0a635b87045",
+            "path": "templates.starter-template",
+            "category_id": "",
+            "primary_color": "",
+            "thumbnail": "",
+            "is_default": true
+        }
+    ]
 }
