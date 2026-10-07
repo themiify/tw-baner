@@ -6,7 +6,7 @@ node_modules/
 dist/
 dist-ssr/
 
-# Salla Twilight & Temp files
+# Salla Twilight & Temp files  
 .salla-temp/
 *.local
 
