@@ -1,6 +1,6 @@
 {
     "name": {
-        "ar": "\u0628\u0627\u0646\u0631",
+        "ar": "بانر",
         "en": "baner"
     },
     "description": {
@@ -10,5 +10,8 @@
     "author_email": "MahmoudSalah@azzrk.com",
     "support_url": "",
     "repository": "https://github.com/themiify/tw-baner",
-    "components": []
+    "components": [],
+    "features": [
+        "landing-page-templates"
+    ]
 }
